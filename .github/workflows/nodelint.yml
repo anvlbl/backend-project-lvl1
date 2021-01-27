@@ -1,9 +1,10 @@
 # Name of workflow
-name: Node CI
+name: Node-linter-check
 
 # Trigger the workflow on push or pull request
 on:
   - push
+  - pull_request
 
 jobs:
   build:
@@ -17,12 +18,13 @@ jobs:
         node-version: [14.x]
         
     steps:
-      # Check-out repository under GitHub workspace
-      # https://github.com/actions/checkout
       - uses: actions/checkout@v2
-      - name: Run linter
-        # Run Linter
+
+      - name: Install enviroment
+        run: 
+          npm install eslint
+          npm install eslint-config-airbnb-base
+          npm install eslint-plugin-import
+      - name: Linter check
         run: |
           make lint
-        env:
-          CI: true
