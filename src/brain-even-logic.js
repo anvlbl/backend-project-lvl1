@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { phrases } from './template.js';
+import { phrases } from './index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
