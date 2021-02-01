@@ -15,6 +15,7 @@ const getResult = (number) => (isEven(number) ? 'yes' : 'no');
 
 const prepareForGame = (rules) => {
   sayPhrase(phrases.greeting);
+  sayPhrase(phrases.name);
   const name = getName();
   sayPhrase(`${phrases.hello}, ${name}`);
   sayPhrase(rules);
@@ -24,8 +25,6 @@ const prepareForGame = (rules) => {
 const theGame = () => {
   const name = prepareForGame(rule);
   const maxAnswersCount = 3;
-
-  prepareForGame(rule);
 
   for (let i = 0; i < maxAnswersCount; i += 1) {
     const num = setNumber();
@@ -37,12 +36,12 @@ const theGame = () => {
 
     if (answer !== result) {
       sayPhrase(`${answer} ${phrases.incorrect} ${result}`);
-      sayPhrase(`${phrases['try again']}`);
+      sayPhrase(`${phrases['try again']}, ${name}!`);
       return;
     }
     sayPhrase(phrases.correct);
   }
-  sayPhrase(`${phrases.congr}, ${name}`);
+  sayPhrase(`${phrases.congr}, ${name}!`);
 };
 
 export { theGame };
