@@ -1,3 +1,3 @@
-import { theGame } from '../src/brain-even-logic.js';
+import brainEven from '../src/brain-even-logic.js';
 
-theGame();
+brainEven();
