@@ -9,7 +9,7 @@ const templates = {
   answer: 'Your answer: ',
   'try again': 'Let\'s try again',
   correct: 'Correct!',
-  congr: 'Congratulations',
+  congrats: 'Congratulations',
 };
 
 const sayPhrase = (phrase) => console.log(phrase);
@@ -46,7 +46,7 @@ const gameLoop = (rule, setQuestion, getResult) => {
     }
     sayPhrase(templates.correct);
   }
-  sayPhrase(`${templates.congr}, ${name}!`);
+  sayPhrase(`${templates.congrats}, ${name}!`);
 };
 
 export { templates, gameLoop };
