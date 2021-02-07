@@ -17,11 +17,11 @@ const getResult = (data) => {
   const { number1, number2, exp } = data;
   switch (exp) {
     case '+':
-      return number1 + number2;
+      return (number1 + number2).toString();
     case '-':
-      return number1 - number2;
+      return (number1 - number2).toString();
     case '*':
-      return number1 * number2;
+      return (number1 * number2).toString();
     default:
       return 'unknown operator';
   }

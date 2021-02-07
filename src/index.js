@@ -39,7 +39,7 @@ const gameLoop = (rule, setQuestion, getResult) => {
     const result = getResult(data);
     const answer = askQuestion(templates.answer);
 
-    if (answer !== result.toString()) {
+    if (answer !== result) {
       sayPhrase(`${answer} ${templates.incorrect} ${result}`);
       sayPhrase(`${templates['try again']}, ${name}!`);
       return;

@@ -19,7 +19,7 @@ const gcd = (a, b) => {
 
 const getResult = (data) => {
   const { number1, number2 } = data;
-  return gcd(number1, number2);
+  return gcd(number1, number2).toString();
 };
 
 export default () => gameLoop(rule, setQuestion, getResult);

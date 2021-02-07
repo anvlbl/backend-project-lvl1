@@ -19,6 +19,6 @@ const setQuestion = () => {
   return { question, data };
 };
 
-const getResult = (data) => data;
+const getResult = (data) => data.toString();
 
 export default () => gameLoop(rule, setQuestion, getResult);
