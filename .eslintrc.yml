@@ -13,3 +13,4 @@ rules:
   no-console: 0
   import/extensions: 0
   import/prefer-default-export: off
+  linebreak-style: 0
